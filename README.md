@@ -1,4 +1,4 @@
-# Introdução à Lógica de Programação com C
+# Fundamentos de Lógica de Programação com C
 
 ## Objetivo
 
