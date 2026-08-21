@@ -1,0 +1,169 @@
+GIT — RESUMO RÁPIDO
+
+CONCEITOS
+
+Git → Sistema distribuído de controle de versões.
+
+GitHub → Plataforma remota para hospedar e trabalhar com repositórios Git.
+
+Repositório local → Repositório Git que está no meu computador.
+
+Repositório remoto → Repositório Git que está em um servidor, como o GitHub.
+
+
+SISTEMAS DE CONTROLE DE VERSÃO
+
+Local → Controle de versões feito na própria máquina.
+
+Centralizado → Existe um servidor central onde fica o histórico principal.
+             → Depende desse servidor para várias operações.
+
+Distribuído → Cada clone possui uma cópia completa do histórico.
+            → Permite trabalhar offline.
+            → O Git é um sistema distribuído.
+
+
+ÁREAS DO GIT
+
+Working Directory → Onde eu modifico os arquivos.
+
+Staging Area → Onde preparo as alterações para o próximo commit.
+
+Repository → Onde ficam registrados os commits.
+
+
+FLUXO PRINCIPAL
+
+Working Directory
+        ↓
+     git add
+        ↓
+Staging Area
+        ↓
+    git commit
+        ↓
+Repository
+
+
+ESTADOS DOS ARQUIVOS
+
+Untracked → Arquivo que o Git ainda não está rastreando.
+
+Modified → Arquivo que foi alterado depois da última versão registrada.
+
+Staged → Alteração preparada para entrar no próximo commit.
+
+Committed → Alteração já registrada em um commit.
+
+
+COMANDOS BÁSICOS
+
+git init → Cria um repositório Git na pasta.
+
+git status → Mostra o estado atual do repositório.
+
+git add arquivo.txt → Coloca o arquivo na Staging Area.
+
+git add . → Coloca as alterações do diretório na Staging Area.
+
+git commit -m "mensagem" → Registra as alterações em um novo commit.
+
+git log → Mostra o histórico de commits.
+
+git diff → Mostra as diferenças entre versões/alterações.
+
+
+GITHUB / REPOSITÓRIO REMOTO
+
+git clone → Copia um repositório remoto para o computador.
+
+git push → Envia commits do repositório local para o remoto.
+
+Local →→→ Remoto
+        push
+
+
+git fetch → Busca informações/alterações do remoto sem integrar as mudanças ao trabalho local.
+
+Remoto →→→ Local
+          fetch
+
+
+git pull → Busca alterações do remoto e as integra ao repositório local.
+
+Remoto →→→ Local
+          pull
+
+
+RESUMO PARA DECORAR
+
+git init → criar
+git status → verificar
+git add → preparar
+git commit → registrar
+git log → histórico
+git diff → diferenças
+
+git clone → copiar do remoto
+git fetch → buscar do remoto
+git pull → buscar + integrar
+git push → enviar para o remoto
+
+
+OUTROS COMANDOS
+
+git restore arquivo.txt → Descarta alterações locais do arquivo.
+
+git restore --staged arquivo.txt → Tira o arquivo da Staging Area sem apagar a alteração.
+
+git reset --soft HEAD~1 → Desfaz o último commit mantendo as alterações preparadas.
+
+git revert HEAD → Cria um novo commit que desfaz o commit anterior.
+
+
+CONCEITOS IMPORTANTES
+
+Snapshot → Estado lógico do projeto em determinado momento.
+
+Commit → Registro histórico de um snapshot preparado.
+
+Hash → Identificador hexadecimal gerado a partir do conteúdo.
+
+DAG → Estrutura que representa as relações entre os commits.
+
+Blob → Guarda o conteúdo de um arquivo.
+
+Tree → Representa a estrutura de diretórios/arquivos.
+
+Tag → Referência/nome dado a um commit importante.
+
+
+GIT × GITHUB
+
+Git → ferramenta/sistema de controle de versões.
+
+GitHub → plataforma remota que hospeda repositórios Git.
+
+
+DIREÇÃO DOS PRINCIPAIS COMANDOS
+
+git push  → Local → Remoto
+
+git fetch  → Remoto → Local (busca sem integrar)
+
+git pull   → Remoto → Local (busca + integra)
+
+git clone  → Remoto → Computador (copia o repositório)
+
+
+FRASES PARA MEMORIZAR
+
+add → preparar
+commit → registrar
+push → enviar
+fetch → buscar
+pull → puxar + integrar
+clone → copiar
+status → verificar
+log → histórico
+diff → diferenças
